@@ -228,23 +228,29 @@ body {
 }
 
 .gradient-text {
-    background: linear-gradient(45deg, #ffffff 0%, #667eea 25%, #764ba2 50%, #f093fb 75%, #f5576c 100%);
+    background: linear-gradient(45deg, #ffd700 0%, #ff6b6b 25%, #667eea 50%, #764ba2 75%, #f093fb 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    background-size: 200% 200%;
-    animation: gradientShift 3s ease-in-out infinite;
+    background-size: 300% 300%;
+    animation: premiumGradientShift 4s ease-in-out infinite;
     font-weight: 800;
     text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
     position: relative;
 }
 
-@keyframes gradientShift {
+@keyframes premiumGradientShift {
     0%, 100% {
         background-position: 0% 50%;
     }
-    50% {
+    25% {
         background-position: 100% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
     }
 }
 
