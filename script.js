@@ -702,6 +702,7 @@ function initializeNavigation() {
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
+            console.log('Nav link clicked:', href); // Debug log
             
             // Only prevent default for internal links (starting with #)
             if (href.startsWith('#')) {
@@ -715,8 +716,9 @@ function initializeNavigation() {
                         block: 'start'
                     });
                 }
+            } else {
+                console.log('External link, allowing navigation to:', href); // Debug log
             }
-            // External links (like about.html) will work normally
         });
     });
     
