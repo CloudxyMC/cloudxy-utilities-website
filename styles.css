@@ -1198,6 +1198,10 @@ html {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 15px;
+    color: #eee; /* Default color for non-premium text */
+}
+
+.premium .section-header h2 .premium-text {
     background: linear-gradient(135deg, #ffd700 0%, #ff6b6b 25%, #667eea 50%, #764ba2 75%, #f093fb 100%);
     background-size: 300% 300%;
     -webkit-background-clip: text;
@@ -1219,14 +1223,6 @@ html {
     75% {
         background-position: 0% 100%;
     }
-}
-
-/* Alternative approach: Use span for premium text */
-.premium .section-header h2 .premium-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .command-category.premium {
