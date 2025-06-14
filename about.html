@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cloudxy's Utilities</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/bot_logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/bot_logo.png" alt="Bot Logo" class="logo-img">
+                <span class="logo-text">Cloudxy's Utilities</span>
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="index.html#commands" class="nav-link">Commands</a>
+                <a href="index.html#premium" class="nav-link">Premium</a>
+                <a href="#dashboard-soon" class="nav-link">Dashboard</a>
+            </div>
+            <div class="nav-cta">
+                <button class="btn-primary" onclick="inviteBot()">
+                    <i class="fas fa-plus"></i>
+                    Invite Bot
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Meet the Creator Behind
+                    <span class="gradient-text" data-text="Cloudxy's Utilities">Cloudxy's Utilities</span>
+                </h1>
+                <p class="hero-description">
+                    Hi, I'm Cloudxy! I'm passionate about creating tools that bring Discord communities together. 
+                    This bot represents my vision of making server management both powerful and enjoyable.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Features</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-large" onclick="inviteBot()">
+                        <i class="fas fa-plus"></i>
+                        Add to Server
+                    </button>
+                    <button class="btn-secondary btn-large" onclick="scrollToSection('story')">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="creator-avatar-large">
+                    <img src="images/creator_avatar.png" alt="Cloudxy" class="creator-img" id="creatorAvatar">
+                    <div class="avatar-status online"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Story Behind <span class="gradient-text">Cloudxy's Utilities</span></h2>
+                <p>From idea to reality - how this Discord bot came to life</p>
+            </div>
+            <div class="story-grid">
+                <div class="story-card">
+                    <div class="story-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>How It Started</h3>
+                    <p>
+                        The idea for Cloudxy's Utilities began when I noticed that many Discord servers 
+                        needed better tools for community engagement and management. I wanted to create 
+                        something that would make Discord servers more fun and organized.
+                    </p>
+                </div>
+                <div class="story-card">
+                    <div class="story-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>The Vision</h3>
+                    <p>
+                        My vision was to create a comprehensive Discord bot that combines utility features, 
+                        entertainment, and community management tools. Something that would be both powerful 
+                        and easy to use for server administrators.
+                    </p>
+                </div>
+                <div class="story-card">
+                    <div class="story-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>The Mission</h3>
+                    <p>
+                        To provide Discord communities with the best tools for engagement, moderation, 
+                        and entertainment. Making server management easier while keeping communities 
+                        active and engaged.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-me">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About <span class="gradient-text">Me</span></h2>
+                    <p class="about-description">
+                        Hi there! I'm Cloudxy, a passionate developer who loves creating useful tools 
+                        and bringing communities together through technology. I believe that great software 
+                        should be both powerful and accessible to everyone.
+                    </p>
+                    <p class="about-description">
+                        When I'm not coding, you can find me exploring new technologies, contributing 
+                        to open-source projects, or helping other developers learn and grow. I'm always 
+                        excited to hear feedback and suggestions from the community!
+                    </p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <i class="fas fa-code"></i>
+                            <span>Passionate Developer</span>
+                        </div>
+                        <div class="about-stat">
+                            <i class="fas fa-users"></i>
+                            <span>Community Builder</span>
+                        </div>
+                        <div class="about-stat">
+                            <i class="fas fa-heart"></i>
+                            <span>Discord Enthusiast</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="creator-avatar-medium">
+                        <img src="images/creator_avatar.png" alt="Cloudxy" class="creator-img-medium">
+                        <div class="avatar-status online"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built With <span class="gradient-text">Modern Technology</span></h2>
+                <p>The tech stack that powers Cloudxy's Utilities</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Powerful backend with discord.py framework</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>MySQL</h3>
+                    <p>Reliable database for data persistence</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3>Discord API</h3>
+                    <p>Latest Discord features and integrations</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Modern Web</h3>
+                    <p>Responsive design with CSS3 and JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In <span class="gradient-text">Touch</span></h2>
+                <p>Have questions, suggestions, or just want to say hi? I'd love to hear from you!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-buttons">
+                    <button class="btn-primary btn-large" onclick="inviteBot()">
+                        <i class="fas fa-plus"></i>
+                        Invite Bot
+                    </button>
+                    <button class="btn-secondary btn-large" onclick="showNotification('Contact information will be added soon!', 'info')">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Cloudxy's Utilities</h3>
+                    <p>Making Discord communities better, one server at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#commands">Commands</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#" onclick="showNotification('Support information will be added soon!', 'info')">Help Center</a></li>
+                        <li><a href="#" onclick="showNotification('Contact information will be added soon!', 'info')">Contact</a></li>
+                        <li><a href="#" onclick="showNotification('Documentation will be added soon!', 'info')">Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cloudxy's Utilities. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // About page specific functions
+        function updateCreatorAvatar() {
+            const avatar = document.getElementById('creatorAvatar');
+            if (avatar) {
+                avatar.onerror = function() {
+                    this.src = 'images/bot_logo.png'; // Fallback to bot logo
+                };
+            }
+        }
+
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Initialize about page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCreatorAvatar();
+            initializeAnimations();
+        });
+    </script>
+</body>
+</html> 
