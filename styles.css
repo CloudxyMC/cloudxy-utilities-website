@@ -1202,12 +1202,24 @@ html {
 }
 
 .premium .section-header h2 .premium-text {
-    background: linear-gradient(135deg, #ffd700 0%, #ff6b6b 25%, #667eea 50%, #764ba2 75%, #f093fb 100%);
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: premiumGradientShift 4s ease-in-out infinite;
+    background: linear-gradient(135deg, #ffd700 0%, #ff6b6b 25%, #667eea 50%, #764ba2 75%, #f093fb 100%) !important;
+    background-size: 300% 300% !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    animation: premiumGradientShift 4s ease-in-out infinite !important;
+    display: inline-block;
+}
+
+/* Alternative more specific selector */
+section#premium .section-header h2 span.premium-text {
+    background: linear-gradient(135deg, #ffd700 0%, #ff6b6b 25%, #667eea 50%, #764ba2 75%, #f093fb 100%) !important;
+    background-size: 300% 300% !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    animation: premiumGradientShift 4s ease-in-out infinite !important;
+    display: inline-block;
 }
 
 @keyframes premiumGradientShift {
