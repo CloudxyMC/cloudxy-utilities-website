@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudxy's Utilities - Discord Bot Panel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/bot_logo.png" alt="Bot Logo">
+                <span>Cloudxy's Utilities</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#commands" class="nav-link">Commands</a>
+                <a href="#premium" class="nav-link">Premium</a>
+                <a href="#dashboard-soon" class="nav-link">Dashboard</a>
+            </div>
+            <div class="nav-cta">
+                <button class="btn-primary" onclick="inviteBot()">
+                    <i class="fas fa-plus"></i>
+                    Invite Bot
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    The Ultimate Discord Bot for
+                    <span class="gradient-text" data-text="Server Management">Server Management</span>
+                </h1>
+                <p class="hero-description">
+                    Cloudxy's Utilities provides powerful tools for moderation, entertainment, and server management. 
+                    Explore our free features to enhance your server experience.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Servers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">40+</span>
+                        <span class="stat-label">Commands</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-large" onclick="inviteBot()">
+                        <i class="fas fa-plus"></i>
+                        Add to Server
+                    </button>
+                    <button class="btn-secondary btn-large" onclick="scrollToSection('features')">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="bot-avatar">
+                    <img src="images/bot_logo.png" alt="Bot Logo" class="bot-logo-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Autorole System</h3>
+                    <p>Automatically assign roles to new members when they join your server. Customize welcome messages and role assignments for a seamless onboarding experience.</p>
+                    <div class="feature-tags">
+                        <span class="tag free">Free</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Utility Commands</h3>
+                    <p>Essential utility commands for user info, server management, and moderation tools.</p>
+                    <div class="feature-tags">
+                        <span class="tag free">Free</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Basic Moderation</h3>
+                    <p>Fundamental moderation commands like ban, kick, timeout, and clear to maintain order.</p>
+                    <div class="feature-tags">
+                        <span class="tag free">Free</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Unique Entertainment</h3>
+                    <p>Innovative commands like Would You Rather with voting, Truth or Dare with difficulty levels, daily quotes, random facts, and much more!</p>
+                    <div class="feature-tags">
+                        <span class="tag free">Free</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Interactive Games</h3>
+                    <p>Play Connect 4 with friends, challenge yourself with Wordle, and enjoy interactive voting and decision-making games!</p>
+                    <div class="feature-tags">
+                        <span class="tag free">Free</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Leveling System</h3>
+                    <p>Advanced leveling system with XP based on message activity, character count, and configurable role rewards for each level!</p>
+                    <div class="feature-tags">
+                        <span class="tag free">Free</span>
+                        <span class="tag new">New</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commands Section -->
+    <section id="commands" class="commands">
+        <div class="container">
+            <div class="section-header">
+                <h2>Command Configuration</h2>
+                <p>Easy-to-use interface for managing bot commands</p>
+            </div>
+            <div class="commands-container">
+                <div class="commands-sidebar">
+                    <div class="command-categories">
+                        <button class="category-btn active" data-category="all">
+                            <i class="fas fa-list"></i>
+                            All Commands
+                        </button>
+                        <button class="category-btn" data-category="moderation">
+                            <i class="fas fa-gavel"></i>
+                            Moderation
+                        </button>
+                        <button class="category-btn" data-category="entertainment">
+                            <i class="fas fa-gamepad"></i>
+                            Entertainment
+                        </button>
+                        <button class="category-btn" data-category="leveling">
+                            <i class="fas fa-trophy"></i>
+                            Leveling
+                        </button>
+                        <button class="category-btn" data-category="utility">
+                            <i class="fas fa-tools"></i>
+                            Utility
+                        </button>
+                        <button class="category-btn" data-category="premium">
+                            <i class="fas fa-crown"></i>
+                            Premium
+                        </button>
+                    </div>
+                </div>
+                <div class="commands-main">
+                    <div class="commands-grid" id="commandsGrid">
+                        <!-- Commands will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Section -->
+    <section id="premium" class="premium">
+        <div class="container">
+            <div class="section-header">
+                <h2><span class="premium-text">Premium</span> Features</h2>
+                <p>Unlock advanced features for your server</p>
+            </div>
+            <div class="premium-grid">
+                <div class="premium-card">
+                    <div class="premium-header">
+                        <h3>🛡️ Raid Protection</h3>
+                        <div class="premium-badge">Premium</div>
+                    </div>
+                    <ul class="premium-features">
+                        <li><i class="fas fa-check"></i> Intelligent raid detection</li>
+                        <li><i class="fas fa-check"></i> Configurable thresholds</li>
+                        <li><i class="fas fa-check"></i> Automatic lockdown</li>
+                        <li><i class="fas fa-check"></i> Real-time alerts</li>
+                    </ul>
+                    <div class="premium-command">
+                        <code>/raid_protection enabled:true join_threshold:10 time_window:60</code>
+                    </div>
+                </div>
+                <div class="premium-card">
+                    <div class="premium-header">
+                        <h3>📊 Invite Tracking</h3>
+                        <div class="premium-badge">Premium</div>
+                    </div>
+                    <ul class="premium-features">
+                        <li><i class="fas fa-check"></i> Detailed invite analytics</li>
+                        <li><i class="fas fa-check"></i> Member join tracking</li>
+                        <li><i class="fas fa-check"></i> Inviter identification</li>
+                        <li><i class="fas fa-check"></i> Custom logging channels</li>
+                    </ul>
+                    <div class="premium-command">
+                        <code>/invite_tracking enabled:true #channel</code>
+                    </div>
+                </div>
+                <div class="premium-card">
+                    <div class="premium-header">
+                        <h3>🎫 Ticket System</h3>
+                        <div class="premium-badge">Premium</div>
+                    </div>
+                    <ul class="premium-features">
+                        <li><i class="fas fa-check"></i> Professional ticket creation</li>
+                        <li><i class="fas fa-check"></i> Claim and close functionality</li>
+                        <li><i class="fas fa-check"></i> Chat logging</li>
+                        <li><i class="fas fa-check"></i> Support role management</li>
+                    </ul>
+                    <div class="premium-command">
+                        <code>/ticket_setup #category @support-role</code>
+                    </div>
+                </div>
+                <div class="premium-card">
+                    <div class="premium-header">
+                        <h3>🔔 Social Alerts</h3>
+                        <div class="premium-badge">Premium</div>
+                    </div>
+                    <ul class="premium-features">
+                        <li><i class="fas fa-check"></i> Multi-platform monitoring</li>
+                        <li><i class="fas fa-check"></i> Keyword tracking</li>
+                        <li><i class="fas fa-check"></i> Instant notifications</li>
+                        <li><i class="fas fa-check"></i> Custom alert channels</li>
+                    </ul>
+                    <div class="premium-command">
+                        <code>/social_alerts #channel username:your_username</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Coming Soon Section -->
+    <section id="dashboard-soon" class="dashboard-soon">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dashboard <span class="gradient-text">(Coming Soon)</span></h2>
+                <p>A powerful control panel to customize all bot settings for your server. 
+                   Discord login integration is currently under development to ensure a secure and personalized experience.</p>
+            </div>
+            <div class="coming-soon-content">
+                <i class="fas fa-tools coming-soon-icon"></i>
+                <p class="coming-soon-message">We're working hard to bring you a seamless dashboard experience. Stay tuned!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Cloudxy's Utilities</h4>
+                    <p>The ultimate Discord bot for server management and entertainment.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#commands">Commands</a></li>
+                        <li><a href="#premium">Premium</a></li>
+                        <li><a href="#dashboard-soon">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Discord Server</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Bug Report</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cloudxy's Utilities. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
