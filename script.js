@@ -2,6 +2,15 @@
 const commands = [
     // Main Commands (Visible on homepage)
     {
+        name: "help",
+        description: "Show comprehensive help menu with dropdown categories for all commands",
+        usage: "/help",
+        category: "utility",
+        premium: false,
+        is_main: true,
+        sub_commands: []
+    },
+    {
         name: "level",
         description: "Check your or someone else's level and XP progress",
         usage: "/level @user",
@@ -762,7 +771,7 @@ function scrollToSection(sectionId) {
 
 function inviteBot() {
     // Replace with your actual bot invite link
-    const inviteUrl = 'https://discord.com/api/oauth2/authorize?client_id=YOUR_BOT_ID&permissions=8&scope=bot%20applications.commands';
+    const inviteUrl = 'https://discord.com/oauth2/authorize?client_id=1336816319152001115';
     window.open(inviteUrl, '_blank');
 }
 
