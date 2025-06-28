@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spritz Cookies - Retro Cookie Brand</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+            font-family: Arial, sans-serif;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #ffd93d;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .nav-btn {
+            background: #ff6b6b;
+            border: 3px solid #ffffff;
+            color: white;
+            padding: 15px 30px;
+            font-family: Arial, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 5px 5px 0px #000000;
+        }
+        
+        .nav-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px #000000;
+            background: #ff5252;
+        }
+        
+        .nav-btn:active {
+            transform: translate(0px, 0px);
+            box-shadow: 3px 3px 0px #000000;
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .signup-section {
+            background: rgba(255, 255, 255, 0.1);
+            border: 4px solid #ffd93d;
+            padding: 30px;
+            box-shadow: 10px 10px 0px #000000;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .signup-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffd93d;
+            font-family: Arial, sans-serif;
+        }
+        
+        .limited-spots {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+            font-weight: 700;
+            font-size: 1.1rem;
+            font-family: Arial, sans-serif;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffd93d;
+            font-family: Arial, sans-serif;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            background: #ffffff;
+            border: 3px solid #ff6b6b;
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            color: #333;
+            box-shadow: 3px 3px 0px #000000;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #ffd93d;
+            box-shadow: 3px 3px 0px #000000, 0 0 10px #ffd93d;
+        }
+        
+        .signup-btn {
+            width: 100%;
+            background: #ffd93d;
+            border: 3px solid #ffffff;
+            color: #333;
+            padding: 20px;
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 5px 5px 0px #000000;
+            letter-spacing: 2px;
+        }
+        
+        .signup-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px #000000;
+            background: #ffed4e;
+        }
+        
+        .signup-btn:active {
+            transform: translate(0px, 0px);
+            box-shadow: 3px 3px 0px #000000;
+        }
+        
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 4px solid #4ecdc4;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 8px 8px 0px #000000;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #4ecdc4;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #4ecdc4;
+            font-family: 'Pixelify Sans', sans-serif;
+        }
+        
+        .feature-desc {
+            line-height: 1.6;
+            color: #cccccc;
+            font-family: 'Pixelify Sans', sans-serif;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 4px solid #ff6b6b;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .footer-text {
+            font-size: 0.9rem;
+            color: #cccccc;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Pixelify Sans', sans-serif;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px 0;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+                letter-spacing: 4px;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+                letter-spacing: 2px;
+            }
+            
+            .nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .nav-btn {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+            
+            .main-content {
+                gap: 30px;
+                margin-bottom: 40px;
+            }
+            
+            .signup-section {
+                padding: 20px;
+                margin: 0 10px;
+            }
+            
+            .signup-title {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+            
+            .limited-spots {
+                font-size: 1rem;
+            }
+            
+            .form-input {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+            
+            .signup-btn {
+                padding: 15px;
+                font-size: 1rem;
+                letter-spacing: 1px;
+            }
+            
+            .features {
+                gap: 20px;
+                margin-bottom: 40px;
+            }
+            
+            .feature-card {
+                padding: 20px;
+            }
+            
+            .feature-title {
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+            }
+            
+            .feature-desc {
+                font-size: 0.9rem;
+            }
+            
+            .footer {
+                padding: 30px 0;
+            }
+            
+            .footer-text {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+            
+            .tagline {
+                font-size: 0.9rem;
+                letter-spacing: 1px;
+            }
+            
+            .nav-btn {
+                padding: 10px 20px;
+                font-size: 0.8rem;
+            }
+            
+            .signup-title {
+                font-size: 1.3rem;
+            }
+            
+            .form-label {
+                font-size: 0.9rem;
+            }
+            
+            .form-input {
+                padding: 10px;
+                font-size: 0.8rem;
+            }
+            
+            .signup-btn {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: #4ecdc4;
+            border: 3px solid #ffffff;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 5px 5px 0px #000000;
+            margin-top: 20px;
+            font-family: 'Pixelify Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">Spritz</h1>
+            <p class="tagline">The Ultimate Cookie Experience</p>
+            
+            <!-- Navigation -->
+            <nav class="nav">
+                <button class="nav-btn">Home</button>
+                <button class="nav-btn">Contact</button>
+            </nav>
+        </header>
+        
+        <!-- Main Content -->
+        <main>
+            <div class="main-content">
+                <!-- Sign Up Form -->
+                <div class="signup-section">
+                    <h2 class="signup-title">Reserve Your Spot!</h2>
+                    <p class="limited-spots">⚠️ LIMITED SPOTS AVAILABLE ⚠️</p>
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name</label>
+                            <input type="text" id="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone</label>
+                            <input type="tel" id="phone" class="form-input" required>
+                        </div>
+                        <button type="submit" class="signup-btn">Reserve My Spot!</button>
+                    </form>
+                    <div id="success-message" class="success-message">
+                        🎉 Spot Reserved! We'll contact you soon! 🍪
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Features -->
+            <div class="features">
+                <!-- Feature cards removed -->
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text">© 2024 Spritz Cookies. All rights reserved. | Made with ❤️ and lots of butter</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Google Sheets integration
+        const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwqctWgA1e-dOriPNlEQfHS0QLM2ZPmbqkaiKhW66rbltFItft4PBmvmEj0GKcNcEql/exec';
+        
+        // Form submission handling
+        document.getElementById('signup-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            
+            // Get current date and time
+            const now = new Date();
+            const dateTime = now.toLocaleString();
+            const timestamp = now.getTime();
+            
+            // Create reservation data object
+            const reservationData = {
+                name: name,
+                email: email,
+                phone: phone,
+                dateTime: dateTime,
+                timestamp: timestamp
+            };
+            
+            // Show loading state
+            const submitBtn = document.querySelector('.signup-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Reserving...';
+            submitBtn.disabled = true;
+            
+            try {
+                // Send to Google Sheets
+                await sendToGoogleSheets(reservationData);
+                
+                // Show success message
+                const successMessage = document.getElementById('success-message');
+                successMessage.style.display = 'block';
+                
+                // Reset form
+                document.getElementById('signup-form').reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+                
+                // Store locally as backup
+                const existingReservations = JSON.parse(localStorage.getItem('spritzReservations') || '[]');
+                existingReservations.push(reservationData);
+                localStorage.setItem('spritzReservations', JSON.stringify(existingReservations));
+                
+                console.log('Reservation sent to Google Sheets:', reservationData);
+                
+            } catch (error) {
+                console.error('Error sending reservation:', error);
+                alert('There was an error sending your reservation. Please try again.');
+            } finally {
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+        
+        // Function to send data to Google Sheets
+        async function sendToGoogleSheets(data) {
+            const formData = new FormData();
+            formData.append('name', data.name);
+            formData.append('email', data.email);
+            formData.append('phone', data.phone);
+            formData.append('dateTime', data.dateTime);
+            formData.append('timestamp', data.timestamp);
+            
+            const response = await fetch(GOOGLE_SHEETS_URL, {
+                method: 'POST',
+                body: formData
+            });
+            
+            if (!response.ok) {
+                throw new Error('Failed to send data to Google Sheets');
+            }
+            
+            return response.text();
+        }
+        
+        // Add some interactive effects
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Add click effect
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+        
+        // Add parallax effect to cookie image
+        window.addEventListener('scroll', function() {
+            const cookieImage = document.querySelector('.cookie-image');
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            cookieImage.style.transform = `translateY(${rate}px)`;
+        });
+    </script>
+</body>
+</html>
